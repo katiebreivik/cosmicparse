@@ -21,11 +21,14 @@ bpp = pd.read_hdf(dat_file, key='bpp')
 
 for pop in pop_select:
     if pop == 'DWD':
+        print('analyze DWDs')
         if counts:
-            print(len(bpp.loc[(bpp.kstar_1.isin([10,11,12])) & (bpp.kstar_2.isin([10,11,12]))].values))
+            print('counts':, len(bpp.loc[(bpp.kstar_1.isin([10,11,12])) & (bpp.kstar_2.isin([10,11,12]))].values))
     elif pop == 'DNS':
+        print('analyze DNSs')
         if counts:
-            print(len(bpp.loc[(bpp.kstar_1 == 13) & (bpp.kstar_2 == 13)].values))
+            print('counts':, len(bpp.loc[(bpp.kstar_1 == 13) & (bpp.kstar_2 == 13)].values))
     elif pop == 'BBH':
+        print('analyze BBHs')
         if counts:
-            print(len(bpp.loc[(bpp.kstar_1 == 14) & (bpp.kstar_2 == 14)].values))
+            print('counts':, len(bpp.loc[(bpp.kstar_1 == 14) & (bpp.kstar_2 == 14)].values))
